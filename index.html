@@ -10,6 +10,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link rel="stylesheet" href="portofolio.css">
+
+<!-- Kustomisasi gaya tombol Download CV agar serasi -->
+<style>
+  .btn-download-cv {
+    display: inline-block;
+    background: linear-gradient(135deg, #1a73e8, #00b4ff);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(26,115,232,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-download-cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26,115,232,0.5);
+  }
+  .btn-download-cv i {
+    margin-right: 8px;
+  }
+</style>
 </head>
 <body>
 
@@ -34,6 +60,12 @@
     <p class="description">
       I am a beginner programmer learning to code. I want to master HTML, CSS, and JavaScript to build engaging websites.
     </p>  
+    
+    <!-- TOMBOL DOWNLOAD CV YANG DITAMBAHKAN -->
+    <a href="putih dan hitam modern cv resume riwayat hidup_20260701_092832_0000.jpg" download="CV_Muhammad_Fazrillah.jpg" class="btn-download-cv">
+      <i class="fas fa-file-download"></i> Download CV
+    </a>
+
     <div class="social-media">
       <a href="https://www.instagram.com/fzrillahh_?igsh=cjU2ODg5eXhneGsw" target="_blank" class="sm-icon">
         <i class="fab fa-instagram"></i>
@@ -193,6 +225,7 @@ const texts = [
   "Web Developer",
   "UI/UX Designer",
   "Frontend Developer"
+change text
 ];
 
 let index = 0;
@@ -225,4 +258,5 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 </script>
 
 </body>
-  </html>
+      </html>
+
