@@ -1,0 +1,434 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 10%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #1a73e8;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  color: #1a73e8;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1a73e8;
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin: 10px 0;
+}
+
+#changing-text {
+  color: #1a73e8;
+}
+
+.description {
+  margin-bottom: 25px;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.sm-icon {
+  font-size: 1.8rem;
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.sm-icon:hover {
+  color: #1a73e8;
+  transform: translateY(-5px);
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border: 5px solid #fff;
+}
+
+/* ==========================================================================
+   4. ABOUT SECTION & SKILLS
+   ========================================================================== */
+.about-container h3 {
+  margin: 30px 0 15px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  list-style: none;
+}
+
+.skills-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.skill-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   5. RESUME SECTION
+   ========================================================================== */
+.resume-container h2:nth-of-type(2) {
+  margin-top: 40px;
+}
+
+.resume-list {
+  list-style: none;
+  position: relative;
+  border-left: 2px solid #1a73e8;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.resume-list li {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.resume-list li::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #1a73e8;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   6. PORTFOLIO (GALLERY) SECTION
+   ========================================================================== */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3, .project-card p {
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.project-tech {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tech span {
+  background: #e8f0fe;
+  color: #1a73e8;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   7. SERVICE SECTION
+   ========================================================================== */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #1a73e8;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   8. CONTACT SECTION
+   ========================================================================== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.btn {
+  background: #1a73e8;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #155cb4;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info a {
+  color: #1a73e8;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 30px 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-nav a:hover {
+  color: #1a73e8;
+}
+
+/* ==========================================================================
+   10. MEDIA QUERIES (Kunci Responsif Android & Tablet)
+   ========================================================================== */
+
+/* Tablet & HP Besar */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 5%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column-reverse; /* Gambar pindah ke atas teks di HP */
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-img img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+/* HP Android Kecil */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-img img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Animasi untuk toast JavaScript bawaanmu */
+@keyframes slideIn {
+  from { transform: translateX(120%); }
+  to { transform: translateX(0); }
+}
